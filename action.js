@@ -1,6 +1,7 @@
 const core = require("@actions/core");
 const github = require("@actions/github");
 //const getOctokit = require("./lib/actions/octokit");
+const { validatePR } = require("./lib/actions/pullRequest");
 
 exports.getActionParameters = function getActionParameters() {
   const pullRequest = github.context.payload.pull_request;
@@ -22,6 +23,7 @@ exports.action = async function action() {
         "payload",
         JSON.stringify(github.context.payload, undefined, 4)
       );
+      validatePR({ pullRequest });
       break;
   }
 };
