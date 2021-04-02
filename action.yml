@@ -1,4 +1,4 @@
-name: "Asana Github Actions"
+name: "Github Actions Mobsuccess"
 description: "Asana Github Mobsuccess Compliance"
 inputs:
   action:
