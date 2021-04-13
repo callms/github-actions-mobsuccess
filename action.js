@@ -15,7 +15,7 @@ exports.action = async function action() {
   console.info(`Calling action ${action}`);
   switch (action) {
     case "validate-pr":
-      validatePR({ pullRequest });
+      await validatePR({ pullRequest });
       break;
   }
 };
