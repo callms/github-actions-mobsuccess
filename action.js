@@ -15,14 +15,6 @@ exports.action = async function action() {
   console.info(`Calling action ${action}`);
   switch (action) {
     case "validate-pr":
-      console.log(
-        "info",
-        JSON.stringify({ pullRequest, action }, undefined, 4)
-      );
-      console.log(
-        "payload",
-        JSON.stringify(github.context.payload, undefined, 4)
-      );
       validatePR({ pullRequest });
       break;
   }
